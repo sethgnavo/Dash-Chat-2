@@ -2,8 +2,10 @@ import 'package:examples/samples/avatar.dart';
 import 'package:examples/samples/basic.dart';
 import 'package:examples/samples/media.dart';
 import 'package:examples/samples/mention.dart';
+import 'package:examples/samples/plus_messenger.dart';
 import 'package:examples/samples/quick_replies_sample.dart';
 import 'package:examples/samples/send_on_enter.dart';
+import 'package:examples/samples/span.dart';
 import 'package:examples/samples/theming.dart';
 import 'package:examples/samples/typing_users_sample.dart';
 import 'package:flutter/material.dart';
@@ -73,6 +75,14 @@ class MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () => push(ThemeSample()),
               child: const Text('Theming'),
+            ),
+            ElevatedButton(
+              onPressed: () => push(PlusSample()),
+              child: const Text('PLUS Messenger'),
+            ),
+            ElevatedButton(
+              onPressed: () => push(SpanSample()),
+              child: const Text('Span '),
             ),
           ],
         ),
