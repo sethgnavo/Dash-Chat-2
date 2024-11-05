@@ -93,7 +93,7 @@ class MessageRow extends StatelessWidget {
             child: ConstrainedBox(
               constraints: BoxConstraints(
                 maxWidth: messageOptions.maxWidth ??
-                    MediaQuery.of(context).size.width * 0.7,
+                    MediaQuery.of(context).size.width * 0.8,
               ),
               child: Column(
                 crossAxisAlignment: isOwnMessage
@@ -103,12 +103,12 @@ class MessageRow extends StatelessWidget {
                 children: <Widget>[
                   if (messageOptions.top != null)
                     messageOptions.top!(message, previousMessage, nextMessage),
-                  if (!isOwnMessage &&
+                  /*if (!isOwnMessage &&
                       messageOptions.showOtherUsersName &&
                       (!isPreviousSameAuthor || isAfterDateSeparator))
                     messageOptions.userNameBuilder != null
                         ? messageOptions.userNameBuilder!(message.user)
-                        : DefaultUserName(user: message.user),
+                        : DefaultUserName(user: message.user),*/
                   if (message.medias != null &&
                       message.medias!.isNotEmpty &&
                       messageOptions.textBeforeMedia)

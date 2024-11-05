@@ -4,7 +4,7 @@ part of '../../../dash_chat_2.dart';
 class DefaultAvatar extends StatelessWidget {
   const DefaultAvatar({
     required this.user,
-    this.size = 35,
+    this.size = 24,
     this.fallbackImage,
     this.onPressAvatar,
     this.onLongPressAvatar,
@@ -43,7 +43,7 @@ class DefaultAvatar extends StatelessWidget {
           onLongPressAvatar != null ? () => onLongPressAvatar!(user) : null,
       child: Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 10,
+          horizontal: 8,
         ),
         child: SizedBox(
           height: size,

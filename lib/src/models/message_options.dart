@@ -32,11 +32,13 @@ class MessageOptions {
     this.messageTimeBuilder,
     this.messageMediaBuilder,
     this.borderRadius = 18.0,
+    this.borderRadiusSmall = 4.0,
     Color? currentUserTimeTextColor,
     this.marginDifferentAuthor = const EdgeInsets.only(top: 15),
     this.marginSameAuthor = const EdgeInsets.only(top: 2),
     this.spaceWhenAvatarIsHidden = 10.0,
     this.timeFontSize = 10.0,
+    this.fontSize = 16,
     this.timePadding = const EdgeInsets.only(top: 5),
     this.markdownStyleSheet,
     Color? timeTextColor,
@@ -179,9 +181,9 @@ class MessageOptions {
   /// it will determine which one th show first
   final bool textBeforeMedia;
 
-  /// To create your own BoxDecoration fot the chat bubble
+  /// To create your own ShapeDecoration fot the chat bubble
   /// You can use defaultMessageDecoration to only override some variables
-  final BoxDecoration Function(
+  final ShapeDecoration Function(
       ChatMessage message,
       ChatMessage? previousMessage,
       ChatMessage? nextMessage)? messageDecorationBuilder;
@@ -203,6 +205,11 @@ class MessageOptions {
   /// Default to: `18.0`
   final double borderRadius;
 
+  /// Smallest border radius of the chat bubbles
+  ///
+  /// Default to: `4.0`
+  final double borderRadiusSmall;
+
   /// Margin around the chat bubble when previous author is different
   ///
   /// Default to: `const EdgeInsets.only(top: 15)`
@@ -222,6 +229,11 @@ class MessageOptions {
   ///
   /// Default to: `10.0`
   final double timeFontSize;
+
+  /// Font size of the text message
+  ///
+  /// Default to: `16`
+  final double fontSize;
 
   /// Space between time and message text in chat bubbles
   ///

@@ -60,20 +60,21 @@ class TextContainer extends StatelessWidget {
                   : messageOptions.containerColor,
               borderTopLeft:
                   isPreviousSameAuthor && !isOwnMessage && !isAfterDateSeparator
-                      ? 0.0
+                      ? messageOptions.borderRadiusSmall
                       : messageOptions.borderRadius,
               borderTopRight:
                   isPreviousSameAuthor && isOwnMessage && !isAfterDateSeparator
-                      ? 0.0
+                      ? messageOptions.borderRadiusSmall
                       : messageOptions.borderRadius,
               borderBottomLeft:
                   !isOwnMessage && !isBeforeDateSeparator && isNextSameAuthor
-                      ? 0.0
+                      ? messageOptions.borderRadiusSmall
                       : messageOptions.borderRadius,
               borderBottomRight:
                   isOwnMessage && !isBeforeDateSeparator && isNextSameAuthor
-                      ? 0.0
+                      ? messageOptions.borderRadiusSmall
                       : messageOptions.borderRadius,
+              cornerSmoothing: 0.6,
             ),
       padding: messageOptions.messagePadding,
       child: messageTextBuilder != null
@@ -82,6 +83,8 @@ class TextContainer extends StatelessWidget {
               message: message,
               isOwnMessage: isOwnMessage,
               messageOptions: messageOptions,
+              isPreviousSameAuthor: isPreviousSameAuthor,
+              isAfterDateSeparator: isAfterDateSeparator,
             ),
     );
   }

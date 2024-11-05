@@ -2,19 +2,19 @@ part of '../../dash_chat_2.dart';
 
 /// {@category Customization}
 class MessageListOptions {
-  const MessageListOptions({
-    this.showDateSeparator = true,
-    this.dateSeparatorFormat,
-    this.dateSeparatorBuilder,
-    this.separatorFrequency = SeparatorFrequency.days,
-    this.scrollController,
-    this.chatFooterBuilder,
-    this.showFooterBeforeQuickReplies = false,
-    this.loadEarlierBuilder,
-    this.onLoadEarlier,
-    this.typingBuilder,
-    this.scrollPhysics,
-  });
+  const MessageListOptions(
+      {this.showDateSeparator = true,
+      this.dateSeparatorFormat,
+      this.dateSeparatorBuilder,
+      this.separatorFrequency = SeparatorFrequency.days,
+      this.scrollController,
+      this.chatFooterBuilder,
+      this.showFooterBeforeQuickReplies = false,
+      this.loadEarlierBuilder,
+      this.onLoadEarlier,
+      this.typingBuilder,
+      this.scrollPhysics,
+      this.padding});
 
   /// If you want to who a date separator between messages of different dates
   final bool showDateSeparator;
@@ -52,6 +52,9 @@ class MessageListOptions {
 
   /// Scroll physics of the ListView
   final ScrollPhysics? scrollPhysics;
+
+  /// Padding of the ListView
+  final EdgeInsets? padding;
 }
 
 enum SeparatorFrequency { days, hours }
